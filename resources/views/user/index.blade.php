@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title> Index </title>
+        <title> All Users </title>
     </head>
     <body>
         <h1>All Users</h1>

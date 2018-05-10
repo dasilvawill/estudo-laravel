@@ -2,14 +2,12 @@
 
 <html>
     <head>
-        <title> Index </title>
+        <title> Show user</title>
     </head>
     <body>
-        <h1>All Users</h1>
+        <h1>Show User</h1>
+        <p>I am the user {{ $id }}</p>
     <ul>
-        @foreach($users as $user)
-            <li> {{ $user }} </li>
-        @endforeach
     </ul>
     </body>
 </html>

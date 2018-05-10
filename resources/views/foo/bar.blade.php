@@ -1,4 +1,4 @@
-@extends('foo.base')
+@extends('user.base')
 
 @section('Graduation', 'Graduação')
 

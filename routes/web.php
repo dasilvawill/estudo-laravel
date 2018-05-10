@@ -15,10 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'will'], function() {
+Route::group(['prefix' => 'home'], function() {
 
     Route::get('/', function () {
-        return "Método GET.";
+        return "Método GET!.";
     });
 
     Route::get('/bar', function () {
@@ -31,14 +31,11 @@ Route::group(['prefix' => 'will'], function() {
 });
 
 Route::group(['prefix' => 'user'], function() {
-   Route::get('/', function () {
-       $users = ['William', 'Matheus', 'Guilherme'];
+   Route::get('/', ['uses' => 'UserController@index']);
 
-       return view('user.index', compact('users'));
-   });
-   Route::get('{id}', function ($id) {
-       return view('user.show', compact('id'));
-   });
+   Route::get('{id}', ['uses' => 'UserController@show']);
+
+   Route::get('add', ['uses' => 'UserController@create']);
+
+   Route::post('add', ['uses' => 'UserController@post']);
 });
-
-

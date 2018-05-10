@@ -13,18 +13,18 @@ class UserController extends Controller
         return view('user.index', compact('users'));
     }
 
-    public function show($id)
-    {
-        return view('user.show', compact('id'));
-    }
-
-    public  function  create()
+    public function create()
     {
         return view("user.create");
     }
 
-    public function post()
+    public function post(Request $request)
     {
-        return "TRUE";
+        var_dump($request->only(['email', 'name']));
+    }
+
+    public function show($id)
+    {
+        return view('user.show', compact('id'));
     }
 }

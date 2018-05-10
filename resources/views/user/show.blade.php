@@ -7,8 +7,6 @@
     <body>
         <h1>Show User</h1>
         <p>I am the user {{ $id }}</p>
-    <ul>
-    </ul>
     </body>
 </html>
 

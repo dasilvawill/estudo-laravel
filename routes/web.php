@@ -33,9 +33,9 @@ Route::group(['prefix' => 'home'], function() {
 Route::group(['prefix' => 'user'], function() {
    Route::get('/', ['uses' => 'UserController@index']);
 
-   Route::get('{id}', ['uses' => 'UserController@show']);
-
    Route::get('add', ['uses' => 'UserController@create']);
 
    Route::post('add', ['uses' => 'UserController@post']);
+
+   Route::get('{id}', ['uses' => 'UserController@show']);
 });
